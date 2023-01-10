@@ -88,9 +88,20 @@ var upperCasedCharacters = [
   'Z'
 ];
 
+
+// Confirms
+// Click OK to confirm including Lowercase characters
+// Click OK to confirm including Uppercase characters
+// Click OK to confirm including Numeric characters
+// Click OK to confirm including Special characters
+
 // Function to prompt user for password options
 function getPasswordOptions() {
-
+  if (onclick < 64) {
+    confirm('Click OK to confirm including Lowercase characters')
+  } else if (onclick > 64) {
+    alert('Password length must be less than 64 characters!')
+  }
 }
 
 // Function for getting a random element from an array
@@ -116,3 +127,4 @@ function writePassword() {
 
 // Add event listener to generate button
 generateBtn.addEventListener('click', writePassword);
+
